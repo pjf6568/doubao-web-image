@@ -23,6 +23,9 @@
   "author": "pjf6568",
   "license": "MIT",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "playwright": "^1.58.2",
     "uuid": "^13.0.0"
