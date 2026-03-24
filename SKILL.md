@@ -1,6 +1,13 @@
 ---
 name: "doubao-web"
 description: "使用 Playwright 托管浏览器的方式，调用豆包 Web 端生图功能。当用户要求使用豆包画图、生成图片时调用此技能。"
+instructions: |
+  1. 当用户请求画图、生成图片，并指明使用豆包或未指定特定工具时，请调用此技能。
+  2. 提取用户描述中的核心主体、风格和场景作为 prompt。
+  3. 如果用户指定了图片比例（如头像、壁纸、16:9等），请自动匹配并添加 `--ratio=<value>` 参数。
+  4. 如果用户指定了图片保存路径，请使用 `--output=<path>` 参数。
+  5. 默认使用后台无头模式执行命令：`npx ts-node /Users/pengjianfang/skills/doubao-web-image/scripts/main.ts "用户的prompt" [可选参数]`。
+  6. 执行完毕后，向用户展示生成的图片路径或确认生成成功。
 ---
 
 # Doubao Web Image Generator
