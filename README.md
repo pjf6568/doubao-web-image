@@ -81,6 +81,14 @@ npx ts-node scripts/main.ts "一只带有未来科技感的机器狗"
 - `--output=<path>` 或 `--image=<path>`：指定图片下载保存的路径。
 - `--ui`：强制显示浏览器界面（用于重新登录或手动过验证码）。
 
+## 🤖 作为 AI Skill 使用 (For AI Assistants)
+
+本项目内置了 `SKILL.md`，非常适合作为大模型（如 Trae 等 AI 助手）的扩展技能。
+
+1. **导入技能**：AI 助手只需读取项目根目录下的 `SKILL.md` 文件。
+2. **自然语言交互**：用户可以直接对 AI 说：“帮我用豆包画一张赛博朋克猫咪的手机壁纸”。
+3. **自动执行**：AI 会根据 `SKILL.md` 中的指令，自动解析出 `prompt="赛博朋克猫咪"` 和 `--ratio=9:16`，并在后台静默调用命令行生成图片返回给用户。
+
 **综合示例：**
 ```bash
 npx ts-node scripts/main.ts "星空下的赛博朋克城市" --ratio="9:16" --quality=original --output=./city_wallpaper.png
